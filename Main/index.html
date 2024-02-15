@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CSS Cheatsheet</title>
+  <link rel="stylesheet" href="assets/reset.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1 class="page-title">
+            My CSS Cheatsheet
+        </h1>
+        <p>
+            This page is for storing my favorite CSS codes so that I can always backtrack when I forget. If you also like these stylings, select any snippet and it'lll copy all of the code for you to use as well. Hope you enjoy as much as I do!
+        </p>
+    </header>
+
+    <main>
+        <section class="row justify-center">
+            <div class="columns-3">
+            <div class="card-column">
+                <figure class ="card code-card">
+                    <h2 class="card-header">CSS Animation</h2>
+                    <div class="card-body">
+                        <p>Adds an animation to an element. Once the animation is finished, it goes back to its original style.</p>
+                    </div>
+                    <pre class="code-block"><code>example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}</code></pre>
+                </figure>
+            </div>
+            <div class="card-column">
+                <figure class ="card code-card">
+                    <h2 class="card-header">CSS Image Reflection</h2>
+                    <div class="card-body">
+                        <p>This is used to show a reflection below an image</p>
+                    </div>
+                    <pre class="code-block"><code>img {
+    -webkit-box-reflect: below;
+}</code></pre>
+                </figure>
+            </div>
+
+            <div class="card-column">
+                <figure class ="card code-card">
+                    <h2 class="card-header">Animated Button</h2>
+                    <div class="card-body">
+                        <p>This is how you add a hover effect to a button to animate it</p>
+                    </div>
+                    <pre class="code-block"><code>.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+                      
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+                      
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+                      
+.button:hover span {
+    padding-right: 25px;
+}
+                      
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}</code></pre>
+                </figure>
+            </div>
+            </div>
+
+            <div class="columns-3">
+            <div class="card-column">
+                <figure class ="card code-card">
+                    <h2 class="card-header">CSS Text Shadow</h2>
+                    <div class="card-body">
+                        <p>Adds a shadow effect to the text</p>
+                    </div>
+                    <pre class="code-block"><code>h1 {
+    text-shadow: 2px 2px;
+}</code></pre>
+                </figure>
+            </div>
+            <div class="card-column">
+                <figure class ="card code-card">
+                    <h2 class="card-header">Box Transition Glow</h2>
+                    <div class="card-body">
+                        <p>Use transition and box shadows to glow on hover.</p>
+                    </div>
+                    <pre class="code-block"><code>.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;    
+}
+    
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px opx 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}</code></pre>
+                </figure>
+            </div>
+
+            <div class="card-column">
+                <figure class ="card code-card">
+                    <h2 class="card-header">Flexbox Row</h2>
+                    <div class="card-body">
+                        <p>Use these three properties to create a Flexbox row layout.</p>
+                    </div>
+                    <pre class="code-block"><code>.row {
+    display: flex;
+    flex-direction; row;
+    flex-wrap: wrap;    
+}</code></pre>
+                </figure>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Made with <span role="img" aria-label="heart">❤️</span> and CSS</h3>
+    </footer>
+
+</body>
+
+</html>
