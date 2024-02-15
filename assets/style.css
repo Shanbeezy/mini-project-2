@@ -15,13 +15,15 @@ html {
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.75rem;
     line-height: 1.5;
     color: var(--bright-green);
     background-color: var(--light-gray);
-    overflow-x: hidden;
 }
+
 
 h1, h2, h3 {
     margin-bottom: .625rem;
@@ -35,11 +37,11 @@ h1 {
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 p {
@@ -47,23 +49,24 @@ p {
 }
 
 code {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: monospace
 }
 
 header {
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     padding: 2.5rem;
     text-align: center;
 }
 
 header h1.page-title {
-    padding: 22rem 1.5rem;
+    padding: rem 1.2rem;
     font-size: 4.5 rem;
 }
 
 main {
-    width: 96%;
+    display: flex;
+    width: 90%;
     margin: 2rem auto;
 }
 
@@ -78,15 +81,13 @@ footer {
     flex-direction: row;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
-}
-
-.justify-center {
+    width: 100%;
     justify-content: center;
 }
 
-.columns-3 {
-    width: 100%;
+.row2 {
     display: flex;
+    justify-content: center;
 }
 
 .card-column {
@@ -96,6 +97,7 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+
 .code-card {
     display: flex;
     flex-direction: column;
@@ -104,12 +106,12 @@ footer {
     padding: 2rem;
     color: var(--bright-green);
     outline: 2px dashed var(--light-purple);
-    outline-offset: -2px;
+    outline-offset: -1px;
     transition: all .5s ease-in-out;
 }
 
 .code-card .card-header {
-    position: relative;
+    position:relative;
     margin: -4rem 0 1.5rem 0;
     padding: .5rem 1rem;
     background-color: var(--light-purple);
